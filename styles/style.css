@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+input,
+textarea,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  --text-color: #ffffff;
+  --button-color: #02799d;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: Opx;
+  border: 0;
+  appearance: none;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+h1,
+p {
+  color: var(--text-color);
+}
+h1 {
+  font-size: 4.8rem;
+}
+p {
+  font-size: 1.8rem;
+  width: min(64.8rem, 100%);
+}
+
+h1, p {
+  margin:0 0 0 3rem;
+}
+
+.button {
+  font-size: 1.4rem;
+  padding: 1.2rem 3.2rem;
+  border: 0.3rem solid var(--text-color);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.button:hover {
+  background: var(--text-color);
+  font-weight: 600;
+  color: var(--button-color);
+}
+
+.conteiner {
+  width: min(122rem, 90vw);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  padding: 5rem 0;
+  position: fixed;
+}
+
+nav a {
+  font-size: 2.2rem;
+  transition: 0.3s;
+}
+nav a:hover,  nav a.active {
+  font-weight: 600;
+}
+
+.page-home, .page-o-universo, .page-exploracao {
+  display: flex;
+  justify-content: center;
+  
+  width: 100vw;
+  height: 100vh;
+ 
+  background-size: cover;
+}
+
+.page-o-universo, .page-exploracao{
+  align-items: flex-start;
+  padding: 23rem 0;
+}
+
+.page-home main, .page-o-universo main, .page-exploracao main{
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.page-home {
+  background: url("/src/images/mountains-universe-1.png") bottom no-repeat;
+  align-items: center;
+
+}
+.page-home main {
+  justify-content: center;
+  align-items: center;
+}
+
+.page-o-universo {
+  background: url("/src/images/mountains-universe-2.png") bottom no-repeat;
+}
+
+.page-exploracao {
+  background: url("/src/images/mountains-universe-3.png") bottom no-repeat;
+}
+
+@media (max-width: 768px) {
+  h1, p {
+    margin:0 ;
+  }
+}
